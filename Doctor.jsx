@@ -27,7 +27,7 @@ const Doctor = ({ doctor }) => {
                         {availability.status}
                     </h3>
                     <h3 className='bg-sky-100 text-sky-600 py-1 px-4 w-fit rounded-3xl outline-1 outline-sky-500 font-semibold my-auto'>
-                        {experience}Years Experience
+                        {experience} Years Experience
                     </h3>
 
                 </div>

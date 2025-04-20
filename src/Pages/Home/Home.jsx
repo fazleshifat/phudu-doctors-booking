@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../Header/Banner/Banner';
 import DoctorSection from '../DoctorSection/DoctorSection';
 import { useLoaderData } from 'react-router';
+import ProfileDetails from '../Bookings/Bookings';
 
 const Home = () => {
 
@@ -9,7 +10,7 @@ const Home = () => {
     // console.log(doctorsData)
 
     return (
-        <div>
+        <div className='bg-base-300'>
             <Banner></Banner>
             <DoctorSection doctorsData={doctorsData}></DoctorSection>
         </div>

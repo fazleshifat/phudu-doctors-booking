@@ -6,9 +6,10 @@ import {
 } from "react-router";
 import MainLayout from '../MainLayout/MainLayout';
 import Home from '../../Pages/Home/Home';
-import Bookings from '../../Pages/Bookings/Bookings';
 import Blogs from '../../Pages/Blogs/Blogs';
 import ErrorHandle from '../../Pages/ErrorHandle/ErrorHandle';
+import Bookings from '../../Pages/Bookings/Bookings';
+
 
 
 const router = createBrowserRouter([
