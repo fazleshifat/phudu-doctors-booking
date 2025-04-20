@@ -10,8 +10,8 @@ const Home = () => {
 
     return (
         <div>
-            {/* <Banner></Banner> */}
-            {/* <DoctorSection doctorsData={doctorsData}></DoctorSection> */}
+            <Banner></Banner>
+            <DoctorSection doctorsData={doctorsData}></DoctorSection>
         </div>
     );
 };
