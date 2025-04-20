@@ -3,11 +3,12 @@ import React from 'react';
 const Doctor = ({ doctor }) => {
     console.log(doctor)
 
-    const { image, name, education, experience, registrationNumber, availability } = doctor;
+    const { image, name, education, speciality, experience, registrationNumber, availability } = doctor;
     console.log(
         image,
         name,
         education,
+        speciality,
         registrationNumber,
         availability.status
     )
@@ -33,6 +34,7 @@ const Doctor = ({ doctor }) => {
                 </div>
                 <h2 className="card-title font-bold text-xl md:text-2xl">{name}</h2>
                 <p className="text-md md:text-lg opacity-70">{education}</p>
+                <p className="text-md md:text-lg opacity-70">{speciality}</p>
 
                 <hr className='border-dashed opacity-30 my-2' />
 
