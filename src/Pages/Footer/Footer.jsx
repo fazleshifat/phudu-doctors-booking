@@ -2,12 +2,12 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="footer footer-horizontal footer-center bg-base-300 text-base-content rounded p-10">
+        <footer className="footer footer-horizontal footer-center text-base-content rounded p-10">
 
 
 
             <div className='flex items-center gap-1'>
-                <img src="/public/assets/logo.png" className='w-6' alt="logo" />
+                <img src="/assets/logo.png" className='w-6' alt="logo" />
                 <a className="cursor-pointer font-bold text-2xl">Phudu</a>
             </div>
 
@@ -21,7 +21,7 @@ const Footer = () => {
 
                 </ul>
             </div>
-            <hr className='w-2xl text-gray-500'/>
+            <hr className='w-auto md:w-2xl text-gray-500' />
             <nav>
                 <div className="grid grid-flow-col gap-4">
                     <a>
@@ -59,7 +59,7 @@ const Footer = () => {
                     </a>
                 </div>
             </nav>
-            
+
             {/* <aside>
                 <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
             </aside> */}
