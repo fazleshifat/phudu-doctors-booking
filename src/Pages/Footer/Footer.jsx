@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Footer = () => {
     return (
@@ -8,20 +9,21 @@ const Footer = () => {
 
             <div className='flex items-center gap-1'>
                 <img src="/assets/logo.png" className='w-6' alt="logo" />
-                <a className="cursor-pointer font-bold text-2xl">Phudu</a>
+                <a className="cursor-pointer font-bold text-xl md:text-2xl">Phudu</a>
             </div>
 
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal gap-8 text-xl">
-                    <li>Home</li>
-                    <li>My-Bookings</li>
-                    <li>Blogs</li>
-                    <li>Contact Us</li>
+            <div className="navbar-center flex">
+                <ul className="flex flex-col md:flex-row menu menu-horizontal gap-2 md:gap-8 text-sm md:text-xl">
+                    <li><Link to='/'>Home</Link></li>
+                    
+                    <li><Link to='/my-bookings'>My-Bookings</Link></li>
+                    <li><Link to='/blogs'>Blogs</Link></li>
+                    <li><Link to='/contact'>Contact Us</Link></li>
 
 
                 </ul>
             </div>
-            <hr className='w-auto md:w-2xl text-gray-500' />
+            <hr className=' w-40 md:w-2xl text-gray-500' />
             <nav>
                 <div className="grid grid-flow-col gap-4">
                     <a>

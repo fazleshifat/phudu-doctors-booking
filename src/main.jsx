@@ -2,10 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import Home from './Components/Home/Home'
+import MainLayout from './Components/MainLayout/MainLayout'
+import Routes from './Components/Routes/Routes'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Home></Home>
+    <Routes></Routes>
   </StrictMode>
 )
