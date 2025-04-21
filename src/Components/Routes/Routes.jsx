@@ -8,7 +8,8 @@ import MainLayout from '../MainLayout/MainLayout';
 import Home from '../../Pages/Home/Home';
 import Blogs from '../../Pages/Blogs/Blogs';
 import ErrorHandle from '../../Pages/ErrorHandle/ErrorHandle';
-import Bookings from '../../Pages/Bookings/Bookings';
+import Details from '../../Pages/Details/Details';
+
 
 
 
@@ -22,11 +23,16 @@ const router = createBrowserRouter([
                 path: '/',
                 loader: () => fetch('/doctors.json'),
                 Component: Home,
+            },
+            {
+                path: '/details/:id',
+                loader: () => fetch('/doctors.json'),
+                Component:Details,
             }
             ,
             {
                 path: '/my-bookings',
-                Component: Bookings,
+                // Component: Bookings,
             },
             {
                 path: '/blogs',

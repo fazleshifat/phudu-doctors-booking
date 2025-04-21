@@ -1,7 +1,18 @@
 import React from 'react';
 import { TbInfoHexagon } from "react-icons/tb";
+import { useLoaderData, useParams } from 'react-router';
 
-const Bookings = () => {
+const Details = () => {
+
+    const { id } = useParams();
+    // console.log(id)
+    const data = useLoaderData()
+    // console.log(data)
+    const singleDoctor = data.find(doctor => doctor.id === parseInt(id));
+    // console.log(singleDoctor)
+    const { image, name, education, speciality, experience, registrationNumber, availability,workplace,fee } = singleDoctor;
+
+
     return (
         <div className='py-10 bg-base-300'>
 
@@ -18,7 +29,7 @@ const Bookings = () => {
             {/* whole details about doctor */}
             <div className='flex flex-col md:flex-row px-10 md:gap-10 py-16 my-16 w-11/12 mx-auto bg-white rounded-3xl '>
                 <div className='md:w-4/12 mx-auto bg-base-300 p-4 md:p-10 rounded-3xl'>
-                    <img src="https://i.ibb.co.com/DHkjfXGK/male11.jpg"
+                    <img src={image}
                         className='w-full mx-auto rounded-3xl'
                         alt="doctor" />
                 </div>
@@ -27,26 +38,30 @@ const Bookings = () => {
                 <div className='w-8/12 flex flex-col justify-center'>
 
 
-                    <h1 className='text-2xl md:text-3xl font-bold'>Doctor Name</h1>
-                    <p className='text-sm md:text-lg md:mt-3 opacity-70'>MBBS</p>
-                    <p className='text-sm md:text-lg md:mt-3 opacity-70'>speciality</p>
+                    <h1 className='text-2xl md:text-3xl font-bold'>{name}</h1>
+                    <p className='text-sm md:text-lg md:mt-3 opacity-70'>{education}</p>
+                    <p className='text-sm md:text-lg md:mt-3 opacity-70'>{speciality}</p>
 
 
                     <p className='text-md md:text-xl mt-6 opacity-70'>Working at</p>
-                    <h1 className='text-lg md:text-xl font-bold'>Hospital Name</h1>
+                    <h1 className='text-lg md:text-xl font-bold'>{workplace}</h1>
                     <hr className='border-dashed opacity-30 my-2 mt-10' />
                     <div className="flex gap-2 items-center">
                         <div className='w-6 h-6 border-2 rounded-3xl border-green-800 text-green-800 flex items-center justify-center'>
                             <p className='text-center'>R</p>
 
                         </div>
-                        <p className='font-semibold text-md md:text-lg text-green-800 my-3'>Reg No:</p>
+                        <p className='font-semibold text-md md:text-lg text-green-800 my-3'>Reg No:{registrationNumber}</p>
                     </div>
                     <hr className='border-dashed opacity-30 my-2' />
 
-                    <h2 className='text-md md:text-lg font-bold pt-2'>Availability</h2>
+                    <h2 className='text-md md:text-lg font-bold pt-2'>Availability 
+                    {
+                        availability.days.map(day => <button className='btn mx-3'>{day}</button>)
+                    }
+                    </h2>
 
-                    <h2 className='text-md font-bold mt-4'>Consultation Fee:</h2>
+                    <h2 className='text-md font-bold mt-4'>Consultation Fee: <span className='text-blue-400 text-xl'>Taka:{fee} <span className='text-gray-400'>(incl. Vat)</span> Per consultaion</span></h2>
                 </div>
             </div>
 
@@ -88,4 +103,4 @@ const Bookings = () => {
     );
 };
 
-export default Bookings;
+export default Details;

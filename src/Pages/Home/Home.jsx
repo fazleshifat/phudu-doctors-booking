@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../Header/Banner/Banner';
 import DoctorSection from '../DoctorSection/DoctorSection';
 import { useLoaderData } from 'react-router';
-import ProfileDetails from '../Bookings/Bookings';
+import ProfileDetails from '../Details/Details';
 
 const Home = () => {
 

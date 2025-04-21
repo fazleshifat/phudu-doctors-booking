@@ -1,17 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Doctor = ({ doctor }) => {
-    console.log(doctor)
+    // console.log(doctor)
 
-    const { image, name, education, speciality, experience, registrationNumber, availability } = doctor;
-    console.log(
-        image,
-        name,
-        education,
-        speciality,
-        registrationNumber,
-        availability.status
-    )
+    const { id, image, name, education, speciality, experience, registrationNumber, availability } = doctor;
+    // console.log(
+    //     id,
+    //     image,
+    //     name,
+    //     education,
+    //     speciality,
+    //     registrationNumber,
+    //     availability.status
+    // )
 
     return (
         <div className="card bg-base-100 w-72 md:w-96 shadow-sm mx-auto rounded-3xl">
@@ -47,7 +49,10 @@ const Doctor = ({ doctor }) => {
                 </div>
 
                 <div className="card-actions">
-                    <button className="btn w-full p-6 border-sky-500 border-2 font-bold text-sky-600 rounded-4xl text-lg mt-3">View Details</button>
+                    
+                    <Link className='btn w-full p-6 border-sky-500 border-2 font-bold text-sky-600 rounded-4xl text-lg mt-3' to={`/details/${id}`}>
+                        View Details
+                    </Link>
                 </div>
             </div>
         </div>
