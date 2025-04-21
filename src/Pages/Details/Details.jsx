@@ -10,7 +10,7 @@ const Details = () => {
     // console.log(data)
     const singleDoctor = data.find(doctor => doctor.id === parseInt(id));
     // console.log(singleDoctor)
-    const { image, name, education, speciality, experience, registrationNumber, availability,workplace,fee } = singleDoctor;
+    const { image, name, education, speciality, experience, registrationNumber, availability, workplace, fee } = singleDoctor;
 
 
     return (
@@ -27,7 +27,7 @@ const Details = () => {
             </div>
 
             {/* whole details about doctor */}
-            <div className='flex flex-col md:flex-row px-10 md:gap-10 py-16 my-16 w-11/12 mx-auto bg-white rounded-3xl '>
+            <div className='flex flex-col md:flex-row px-10 md:gap-10 py-6 md:py-16 my-16 w-11/12 mx-auto bg-white rounded-3xl '>
                 <div className='md:w-4/12 mx-auto bg-base-300 p-4 md:p-10 rounded-3xl'>
                     <img src={image}
                         className='w-full mx-auto rounded-3xl'
@@ -35,33 +35,35 @@ const Details = () => {
                 </div>
 
 
-                <div className='w-8/12 flex flex-col justify-center'>
+                <div className='md:w-8/12 flex flex-col justify-center'>
 
 
-                    <h1 className='text-2xl md:text-3xl font-bold'>{name}</h1>
+                    <h1 className='text-xl md:text-3xl font-bold'>{name}</h1>
                     <p className='text-sm md:text-lg md:mt-3 opacity-70'>{education}</p>
                     <p className='text-sm md:text-lg md:mt-3 opacity-70'>{speciality}</p>
 
 
                     <p className='text-md md:text-xl mt-6 opacity-70'>Working at</p>
-                    <h1 className='text-lg md:text-xl font-bold'>{workplace}</h1>
-                    <hr className='border-dashed opacity-30 my-2 mt-10' />
+                    <h1 className='text-md md:text-xl font-bold'>{workplace}</h1>
+                    <hr className='border-dashed opacity-30 my-2 md:mt-10' />
                     <div className="flex gap-2 items-center">
                         <div className='w-6 h-6 border-2 rounded-3xl border-green-800 text-green-800 flex items-center justify-center'>
                             <p className='text-center'>R</p>
 
                         </div>
-                        <p className='font-semibold text-md md:text-lg text-green-800 my-3'>Reg No:{registrationNumber}</p>
+                        <p className='font-semibold text-xs md:text-lg text-green-800 my-3'>Reg No:span <span className='text-sky-500'>{registrationNumber}</span> </p>
                     </div>
                     <hr className='border-dashed opacity-30 my-2' />
 
-                    <h2 className='text-md md:text-lg font-bold pt-2'>Availability 
-                    {
-                        availability.days.map(day => <button className='btn mx-3'>{day}</button>)
-                    }
+                    <h2 className='text-md md:text-lg font-bold pt-2'>Availability
+                        <div className='flex'>
+                            {
+                                availability.days.map(day => <button className='btn cursor-default p-3 bg-orange-100 text-orange-600 rounded-full mx-1 md:mx-3'>{day}</button>)
+                            }
+                        </div>
                     </h2>
 
-                    <h2 className='text-md font-bold mt-4'>Consultation Fee: <span className='text-blue-400 text-xl'>Taka:{fee} <span className='text-gray-400'>(incl. Vat)</span> Per consultaion</span></h2>
+                    <h2 className='text-md font-bold mt-4'>Consultation Fee: <span className='text-blue-400 text-md md:text-xl'>Taka:{fee}/=</span> <span className='text-gray-400'>(incl. Vat)</span> Per consultaion</h2>
                 </div>
             </div>
 
