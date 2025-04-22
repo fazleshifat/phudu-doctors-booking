@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link, Links } from 'react-router';
+import { NavLink } from 'react-router';
+
+
 
 const Navbar = () => {
     return (
@@ -12,11 +14,12 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><Link to='/'>Home</Link></li>
-                        {/* <li>Home</li> */}
-                        <li><Link to='/my-bookings'>My-Bookings</Link></li>
-                        <li><Link to='/blogs'>Blogs</Link></li>
-                        <li><Link to='/contact'>Contact Us</Link></li>
+                        <li><NavLink className={({isActive})=> (isActive ? 'text-blue-500 font-bold' : '')} 
+                        to='/'>Home</NavLink></li>
+                        
+                        <li><NavLink className={({isActive}) => (isActive ? 'text-blue-500 font-bold' : '')}  to='/my-bookings'>My-Bookings</NavLink></li>
+                        <li><NavLink className={({isActive}) => (isActive ? 'text-blue-500 font-bold' : '')} to='/blogs'>Blogs</NavLink></li>
+                        <li><NavLink className={({isActive}) => (isActive ? 'text-blue-500 font-bold' : '')} to='/contact'>Contact Us</NavLink></li>
                     </ul>
                 </div>
                 <div className='flex items-center md:gap-1'>
@@ -26,11 +29,11 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal gap-8 text-xl">
-                    <li><Link to='/'>Home</Link></li>
+                    <li><NavLink className={({isActive}) => (isActive ? 'text-blue-500 font-bold' : '')} to='/'>Home</NavLink></li>
                     {/* <li>Home</li> */}
-                    <li><Link to='/my-bookings'>My-Bookings</Link></li>
-                    <li><Link to='/blogs'>Blogs</Link></li>
-                    <li><Link to='/contact'>Contact Us</Link></li>
+                    <li><NavLink className={({isActive}) => (isActive ? 'text-blue-500 font-bold' : '')} to='/my-bookings'>My-Bookings</NavLink></li>
+                    <li><NavLink className={({isActive}) => (isActive ? 'text-blue-500 font-bold' : '')} to='/blogs'>Blogs</NavLink></li>
+                    <li><NavLink className={({isActive}) => (isActive ? 'text-blue-500 font-bold' : '')} to='/contact'>Contact Us</NavLink></li>
 
 
                 </ul>

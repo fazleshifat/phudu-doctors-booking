@@ -20,7 +20,7 @@ const DoctorSection = ({ doctorsData }) => {
 
 
     return (
-        <div className='max-w-full mx-auto bg-base-300 py-18'>
+        <div className='max-w-full mx-auto from-gray-300 via-base-3000 to-white ... py-18'>
             <div className='mx-auto text-center space-y-6'>
                 <h1 className='text-3xl md:text-5xl font-bold'>Our Best Doctors</h1>
                 <p className='px-5 text-lg md:text-xl text-gray-500'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a

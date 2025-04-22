@@ -1,16 +1,29 @@
 import React from 'react';
 import { TbInfoHexagon } from "react-icons/tb";
-import { useLoaderData, useParams } from 'react-router';
+import { NavLink, useLoaderData, useParams } from 'react-router';
+import { addToStoreBooking } from '../../Utilities/AddToDB';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const Details = () => {
 
+
+
     const { id } = useParams();
-    // console.log(id)
+    // console.log(typeof id)
     const data = useLoaderData()
     // console.log(data)
     const singleDoctor = data.find(doctor => doctor.id === parseInt(id));
     // console.log(singleDoctor)
     const { image, name, education, speciality, experience, registrationNumber, availability, workplace, fee } = singleDoctor;
+    // console.log(typeof id)
+
+
+    const handleAppointmentBooking = (id) => {
+        console.log('booked')
+
+        addToStoreBooking(id, toast);
+    }
 
 
     return (
@@ -55,20 +68,21 @@ const Details = () => {
                     </div>
                     <hr className='border-dashed opacity-30 my-2' />
 
-                    <h2 className='text-md md:text-lg font-bold pt-2'>Availability
-                        <div className='flex'>
-                            {
-                                availability.days.map(day => <button key={day} className='btn cursor-default p-3 bg-orange-100 text-orange-600 rounded-full mx-1 md:mx-3'>{day}</button>)
-                            }
-                        </div>
+                    <h2 className='text-sm md:text-lg font-bold pt-2'>Availability
+
                     </h2>
+                    <div className='flex flex-wrap md:my-2'>
+                        {
+                            availability.days.map(day => <div key={day} className=' py-2 bg-orange-100 text-orange-500 rounded-full p-1 px-4 font-semibold m-1'>{day}</div>)
+                        }
+                    </div>
 
                     <h2 className='text-md font-bold mt-4'>Consultation Fee: <span className='text-blue-400 text-md md:text-xl'>Taka:{fee}/=</span> <span className='text-gray-400'>(incl. Vat)</span> Per consultaion</h2>
                 </div>
             </div>
 
 
-            {/* booking appoinment div */}
+            {/* booking Appointment div */}
             <div className='flex flex-col justify-center w-11/12 mx-auto bg-white rounded-3xl text-center'>
                 <div className='p-3'>
                     <h1 className='text-xl md:text-3xl font-bold'>Book an Appointment</h1>
@@ -97,7 +111,21 @@ const Details = () => {
                     </div>
 
 
-                    <button className='btn w-full bg-blue-400 text-white hover:bg-primary  text-xl py-6 my-6 rounded-full font-semibold '>Book Appointment Now</button>
+                    <NavLink
+                        to='/my-bookings'
+                        onClick={() => {
+                            handleAppointmentBooking(id)
+                        }}
+                        className='btn w-full bg-blue-400 text-white hover:bg-primary  text-xl py-6 my-6 rounded-full font-semibold '>
+                        Book Appointment Now
+                    </NavLink>
+
+                    <ToastContainer
+                        toastStyle={{ fontSize: '16px', fontWeight: '600' }}
+                        position="bottom-right"
+                        autoClose={5000}
+                        pauseOnHover
+                        theme="colored" />
                 </div>
             </div>
 

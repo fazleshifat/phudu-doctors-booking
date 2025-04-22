@@ -9,6 +9,7 @@ import Home from '../../Pages/Home/Home';
 import Blogs from '../../Pages/Blogs/Blogs';
 import ErrorHandle from '../../Pages/ErrorHandle/ErrorHandle';
 import Details from '../../Pages/Details/Details';
+import MyBookings from '../../Pages/MyBookings/MyBookings';
 
 
 
@@ -32,7 +33,8 @@ const router = createBrowserRouter([
             ,
             {
                 path: '/my-bookings',
-                // Component: Bookings,
+                loader: () => fetch('/doctors.json'),
+                Component:MyBookings,
             },
             {
                 path: '/blogs',
