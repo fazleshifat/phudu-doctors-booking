@@ -50,7 +50,9 @@ const Doctor = ({ doctor }) => {
 
                 <div className="card-actions">
                     
-                    <Link className='btn w-full p-6 border-sky-500 border-2 font-bold text-sky-600 rounded-4xl text-lg mt-3' to={`/details/${id}`}>
+                    <Link onClick={()=>{
+                        window.scrollTo(0,0);
+                    }} className='btn w-full hover:bg-sky-400 hover:text-white p-6 border-sky-500 border-2 font-bold text-sky-600 rounded-4xl text-lg mt-3' to={`/details/${id}`}>
                         View Details
                     </Link>
                 </div>

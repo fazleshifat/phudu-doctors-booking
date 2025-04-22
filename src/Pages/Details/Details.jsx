@@ -58,7 +58,7 @@ const Details = () => {
                     <h2 className='text-md md:text-lg font-bold pt-2'>Availability
                         <div className='flex'>
                             {
-                                availability.days.map(day => <button className='btn cursor-default p-3 bg-orange-100 text-orange-600 rounded-full mx-1 md:mx-3'>{day}</button>)
+                                availability.days.map(day => <button key={day} className='btn cursor-default p-3 bg-orange-100 text-orange-600 rounded-full mx-1 md:mx-3'>{day}</button>)
                             }
                         </div>
                     </h2>
@@ -97,7 +97,7 @@ const Details = () => {
                     </div>
 
 
-                    <button className='btn w-full bg-blue-400 text-white text-xl py-6 my-6 rounded-full font-semibold '>Book Appointment Now</button>
+                    <button className='btn w-full bg-blue-400 text-white hover:bg-primary  text-xl py-6 my-6 rounded-full font-semibold '>Book Appointment Now</button>
                 </div>
             </div>
 
