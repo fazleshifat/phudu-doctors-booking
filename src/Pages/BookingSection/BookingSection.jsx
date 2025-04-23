@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { getStoredAppointment, removeAppointment } from '../../Utilities/AddToDB';
-import NoAppointment from '../../../public/MyBookings/NoAppointment/NoAppointment';
-import Appointment from '../../../public/MyBookings/Appointment/Appointment';
 import { toast } from 'react-toastify';
+import NoAppointment from './MyBookings/NoAppointment/NoAppointment';
+import Appointment from './MyBookings/Appointment/Appointment';
 
 const BookingSection = () => {
 

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import BookedDoctor from '../BookedDoctor/BookedDoctor';
 import ChartFee from '../ChartFee/ChartFee';
-import { getStoredAppointment } from '../../../src/Utilities/AddToDB';
-import { ToastContainer } from 'react-toastify';
+
 
 
 const Appointment = ({ appointmentList, onRemove }) => {

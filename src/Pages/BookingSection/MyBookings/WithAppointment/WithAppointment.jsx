@@ -12,7 +12,7 @@ const WithAppointment = () => {
 
     const [bookingList, setBookingList] = useState([]);
 
-    const data = useLoaderData();
+    const data = useLoaderData(); 
     // console.log(data)
 
 

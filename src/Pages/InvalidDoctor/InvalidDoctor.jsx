@@ -1,6 +1,5 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
-import Navbar from '../Header/Navbar/Navbar';
+
 import { Link } from 'react-router';
 
 const InvalidDoctor = () => {
