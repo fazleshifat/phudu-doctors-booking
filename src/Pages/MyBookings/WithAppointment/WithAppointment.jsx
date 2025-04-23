@@ -1,31 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router';
-import { getStoredBooking } from '../../../Utilities/AddToDB';
-import BookedDoctor from '../BookedDoctor/BookedDoctor';
-import ChartFee from '../ChartFee/ChartFee';
-import ChartSection from '../ChartSection/ChartSection';
+import React from 'react';
 
-const Appointment = () => {
-
-    const [bookingList, setBookingList] = useState([]);
-
-    const data = useLoaderData();
-    // console.log(data)
-
-
-    useEffect(() => {
-        const bookingList = getStoredBooking();
-        //   console.log(bookingList) 
-        const convertedStoredBookings = bookingList.map(id => parseInt(id));
-        // console.log(convertedStoredBookings)
-
-        const myBookingList = data.filter(booking => convertedStoredBookings.includes(booking.id));
-        setBookingList(myBookingList)
-    }, [])
-
-    // console.log(bookingList)
-
-
+const WithAppointment = () => {
     return (
         <div className='m-4 w-11/12 mx-auto'>
 
@@ -33,7 +8,7 @@ const Appointment = () => {
             {/* getting data fo bart chart */}
             {/* <ChartSection bookingList={bookingList}></ChartSection> */}
             <ChartFee bookingList={bookingList}></ChartFee>
-            
+
 
             <h1 className='text-2xl md:text-4xl font-bold text-center'>My Today Appointments</h1>
             <p className='text-lg md:text-xl text-center opacity-70'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
@@ -56,4 +31,4 @@ const Appointment = () => {
     );
 };
 
-export default Appointment;
+export default WithAppointment;
