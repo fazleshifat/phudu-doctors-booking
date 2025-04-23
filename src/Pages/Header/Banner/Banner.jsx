@@ -4,8 +4,8 @@ const Banner = () => {
     return (
         <div className="bg-base-300 min-h-[calc(100vh-72px)] flex items-center">
             <div className=" 
-            bg-gradient-to-b from-gray-300 via-base-3000 to-white ...
-            w-11/12 px-2 py-8 md:py-18 md:my-10 mx-auto border-4 border-white rounded-3xl text-center">
+            bg-gradient-to-b from-gray-200 via-base-3000 to-white ...
+            w-11/12 px-2 py-8 md:py-18 md:my-10 mx-auto border-7 border-white rounded-3xl text-center">
                 <div className="md:my-3 space-y-5">
                     <h1 className="text-2xl md:text-5xl font-bold">Dependable Care, Backed by Trusted 
                         <br className='hidden md:flex'/> Professionals</h1>

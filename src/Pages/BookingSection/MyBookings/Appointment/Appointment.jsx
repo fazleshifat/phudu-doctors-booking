@@ -11,7 +11,7 @@ const Appointment = ({ appointmentList, onRemove }) => {
 
 
     return (
-        <div className='m-4 w-11/12 mx-auto'>
+        <div className='py-8 md:py-20 w-11/12 mx-auto'>
 
 
             {/* getting data fo bart chart */}
@@ -19,7 +19,7 @@ const Appointment = ({ appointmentList, onRemove }) => {
             <ChartFee appointmentList={appointmentList}></ChartFee>
 
 
-            <h1 className='text-2xl md:text-4xl font-bold text-center '>My Today Appointments</h1>
+            <h1 className='text-2xl md:text-4xl font-bold text-center mt-8 md:mt-20'>My Today Appointments</h1>
             <p className='text-lg md:text-xl text-center opacity-70'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
 
             <div className='w-11/12 mx-auto mt-11'>
@@ -30,7 +30,7 @@ const Appointment = ({ appointmentList, onRemove }) => {
 
 
 
-            {/* appointment boooked cards */}
+            {/* appointment booked cards */}
 
             {
                 appointmentList.map(bookedDoctor =>

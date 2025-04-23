@@ -15,7 +15,7 @@ const Details = () => {
     const data = useLoaderData()
     const singleDoctor = data.find(doctor => doctor.id === bookedId);
     // console.log(singleDoctor)
-    const { image, name, education, speciality, registrationNumber, availability, workplace, fee,slogan } = singleDoctor;
+    const { image, name, education, speciality,designation, registrationNumber, availability, workplace, fee,slogan } = singleDoctor;
     // console.log(typeof id)
 
 
@@ -54,8 +54,9 @@ const Details = () => {
 
 
                     <h1 className='text-xl md:text-3xl font-bold'>{name}</h1>
-                    <p className='text-sm md:text-lg md:mt-3 opacity-70'>{education}</p>
-                    <p className='text-sm md:text-lg md:mt-3 opacity-70'>{speciality}</p>
+                    <p className='text-sm md:text-lg md:mt-3 opacity-70 text-gray-600 font-semibold'>{education}</p>
+                    <p className='text-sm md:text-lg md:mt-3 opacity-70'>Speciality: <span className='text-sky-600 font-semibold'>{speciality}</span></p>
+                    <p className='text-sm md:text-lg md:mt-3 opacity-70'>Designation: <span className='text-sky-500 font-semibold'>{designation}</span></p>
 
 
                     <p className='text-md md:text-xl mt-6 opacity-70'>Working at</p>

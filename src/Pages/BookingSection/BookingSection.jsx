@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { getStoredAppointment, removeAppointment } from '../../Utilities/AddToDB';
-import { toast } from 'react-toastify';
 import NoAppointment from './MyBookings/NoAppointment/NoAppointment';
 import Appointment from './MyBookings/Appointment/Appointment';
 
@@ -15,7 +14,7 @@ const BookingSection = () => {
         const stored = getStoredAppointment().map(id => parseInt(id));
         const filtered = data.filter(doc => stored.includes(doc.id));
         setAppointmentList(filtered);
-        console.log(filtered)
+        // console.log(filtered)
     }, []);
 
     const handleRemoveAppointment = (id, name) => {
@@ -31,7 +30,7 @@ const BookingSection = () => {
     return (
 
 
-        <div>
+        <div className='bg-base-300'>
             {
                 appointmentList.length === 0 ? (
                     <NoAppointment></NoAppointment>

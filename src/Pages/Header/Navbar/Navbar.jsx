@@ -22,20 +22,20 @@ const Navbar = () => {
                         <li><NavLink className={({ isActive }) => (isActive ? 'text-blue-500 font-bold' : '')} to='/contact'>Contact Us</NavLink></li>
                     </ul>
                 </div>
+
                 <Link to='/'>
                     <div className='flex items-center md:gap-1'>
                         <img src="/assets/logo.png" className='w-8' alt="logo" />
-                        <a className="cursor-pointer font-bold text-2xl md:text-4xl">Phudu</a>
+                        <p className="cursor-pointer font-bold text-2xl md:text-4xl text-gray-600">phuDu</p>
                     </div>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal gap-8 text-xl">
-                    <li><NavLink className={({ isActive }) => (isActive ? 'text-blue-500 font-bold' : '')} to='/'>Home</NavLink></li>
-                    {/* <li>Home</li> */}
-                    <li><NavLink className={({ isActive }) => (isActive ? 'text-blue-500 font-bold' : '')} to='/my-bookings'>My-Bookings</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? 'text-blue-500 font-bold' : '')} to='/blogs'>Blogs</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? 'text-blue-500 font-bold' : '')} to='/contact'>Contact Us</NavLink></li>
+                <ul className="menu menu-horizontal space-x-10 text-xl">
+                    <li><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 font-bold' : '')} to='/'>Home</NavLink></li>
+                    <li><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 font-bold' : '')} to='/my-bookings'>My-Bookings</NavLink></li>
+                    <li><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 font-bold' : '')} to='/blogs'>Blogs</NavLink></li>
+                    <li><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 font-bold' : '')} to='/contact'>Contact Us</NavLink></li>
 
 
                 </ul>

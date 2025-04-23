@@ -23,7 +23,7 @@ const ChartFee = ({appointmentList} ) => {
     
 
     return (
-        <div className='w-11/12 h-52 mx-auto' >
+        <div className='w-11/12 md:h-130 mx-auto bg-white rounded-3xl' >
 
             <ResponsiveContainer width="100%" height="100%">
 

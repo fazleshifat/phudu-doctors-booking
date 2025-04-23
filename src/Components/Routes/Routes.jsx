@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import {
     createBrowserRouter,
@@ -12,13 +12,18 @@ import Details from '../../Pages/Details/Details';
 
 import InvalidDoctor from '../../Pages/InvalidDoctor/InvalidDoctor';
 import BookingSection from '../../Pages/BookingSection/BookingSection';
+import Loader from '../Loader/Loader';
 
 
 
 const router = createBrowserRouter([
     {
         path: "/",
-        Component: MainLayout,
+        element:<Suspense fallback={Loader}>
+            <MainLayout>
+
+            </MainLayout>
+        </Suspense>,
         children: [
             {
                 index: true,
@@ -41,6 +46,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/blogs',
+                loader: () => fetch('/questions.json'),
                 Component: Blogs,
             }
         ],

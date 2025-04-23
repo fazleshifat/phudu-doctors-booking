@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
 import { FaUserDoctor } from "react-icons/fa6";
-import { ToastContainer } from 'react-toastify';
+
 
 
 const BookedDoctor = ({ bookedDoctor, handleRemove }) => {
 
-    // console.log(bookedDoctor)
 
     const { id, name, education, designation, fee } = bookedDoctor;
-    // console.log(typeof id)
 
 
     const removeBookingHandle = (id, name) => {
@@ -20,8 +18,8 @@ const BookedDoctor = ({ bookedDoctor, handleRemove }) => {
 
     return (
         <div>
-            <div className="card card-border ">
-                <div className="card-body p-8 bg-base-100 w-11/12 mx-auto rounded-2xl space-y-4 my-6">
+            <div className="card space-y-12">
+                <div className="card-body p-8 bg-white w-11/12 mx-auto rounded-2xl space-y-4 my-6">
                     <div className='flex flex-col md:flex-row md:justify-between md:items-center'>
                         <div className='flex flex-col'>
 
