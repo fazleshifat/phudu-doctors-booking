@@ -1,37 +1,55 @@
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 
-const getStoredBooking = () => {
-    const storedBookingSTR = localStorage.getItem('bookedList');
 
-    if (storedBookingSTR) {
-        const storedBookigData = JSON.parse(storedBookingSTR);
-        return storedBookigData;
+const getStoredAppointment = () => {
+    const storedAppointmentSTR = localStorage.getItem('appointmentList');
+    if (storedAppointmentSTR) {
+        const storedAppointmentData = JSON.parse(storedAppointmentSTR);
+        return storedAppointmentData;
     }
     else {
         return [];
     }
 }
 
-const addToStoreBooking = (id) => {
-    const storedBookigData = getStoredBooking();
+const addToStoreAppointment = (id, name) => {
+    console.log(name)
+    const storedAppointmentData = getStoredAppointment();
 
-    if (storedBookigData.includes(id)) {
+    if (storedAppointmentData.includes(id)) {
         toast.error('Already booked this doctor!', {
             position: "bottom-right",
             autoClose: 5000,
-           
+
             progress: undefined,
             theme: "colored",
-            
+
         });
+
     }
     else {
-        storedBookigData.push(id);
-        const data = JSON.stringify(storedBookigData);
-        localStorage.setItem('bookedList', data);
-        toast.success('Successfully booked the doctor!');
+
+        storedAppointmentData.push(id);
+        const data = JSON.stringify(storedAppointmentData)
+        localStorage.setItem('appointmentList', data)
+        toast.success(`Successfully booked an appointment with ${name}`,);
+
+
+
     }
 }
 
-export { addToStoreBooking, getStoredBooking }
+const removeAppointment = (id) => {
+    const appointment = getStoredAppointment();
+    // const convertedAppointment = parseInt(appointment)
+    const remainingAppointment = appointment.filter(appointment => parseInt(appointment) !== id)
+
+    localStorage.setItem('appointmentList', JSON.stringify(remainingAppointment))
+    toast.success(`Successfully removed an appointment with !!`,);
+
+}
+
+
+
+export { addToStoreAppointment, getStoredAppointment, removeAppointment }

@@ -5,15 +5,7 @@ const Doctor = ({ doctor }) => {
     // console.log(doctor)
 
     const { id, image, name, education, speciality, experience, registrationNumber, availability } = doctor;
-    // console.log(
-    //     id,
-    //     image,
-    //     name,
-    //     education,
-    //     speciality,
-    //     registrationNumber,
-    //     availability.status
-    // )
+
 
     return (
         <div className="card bg-base-100 w-72 md:w-96 shadow-sm mx-auto rounded-3xl">

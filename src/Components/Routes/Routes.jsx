@@ -9,9 +9,9 @@ import Home from '../../Pages/Home/Home';
 import Blogs from '../../Pages/Blogs/Blogs';
 import ErrorHandle from '../../Pages/ErrorHandle/ErrorHandle';
 import Details from '../../Pages/Details/Details';
-import MyBookings from '../../Pages/MyBookings/MyBookings';
-import InvalidDoctor from '../../Pages/InvalidDoctor/InvalidDoctor';
 
+import InvalidDoctor from '../../Pages/InvalidDoctor/InvalidDoctor';
+import BookingSection from '../../Pages/BookingSection/BookingSection';
 
 
 
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
                 loader: () => fetch('/doctors.json'),
                 Component: Home,
             },
-            {
+            {   
                 path: '/details/:id',
                 loader: () => fetch('/doctors.json'),
                 Component:Details,
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
             {
                 path: '/my-bookings',
                 loader: () => fetch('/doctors.json'),
-                Component:MyBookings,
-
+                Component:BookingSection,
+                
             },
             {
                 path: '/blogs',

@@ -1,8 +1,8 @@
 import React from 'react';
 import { TbInfoHexagon } from "react-icons/tb";
 import { NavLink, useLoaderData, useParams } from 'react-router';
-import { addToStoreBooking } from '../../Utilities/AddToDB';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+import { addToStoreAppointment } from '../../Utilities/AddToDB';
 
 
 const Details = () => {
@@ -10,19 +10,16 @@ const Details = () => {
 
 
     const { id } = useParams();
-    // console.log(typeof id)
+    const bookedId = parseInt(id)
     const data = useLoaderData()
-    // console.log(data)
-    const singleDoctor = data.find(doctor => doctor.id === parseInt(id));
+    const singleDoctor = data.find(doctor => doctor.id === bookedId);
     // console.log(singleDoctor)
-    const { image, name, education, speciality, experience, registrationNumber, availability, workplace, fee } = singleDoctor;
+    const { image, name, education, speciality, registrationNumber, availability, workplace, fee } = singleDoctor;
     // console.log(typeof id)
 
 
     const handleAppointmentBooking = (id) => {
-        console.log('booked')
-
-        addToStoreBooking(id, toast);
+        addToStoreAppointment(id, name)
     }
 
 
@@ -111,14 +108,14 @@ const Details = () => {
                     </div>
 
 
-                    <NavLink
-                        to='/my-bookings'
+                    <button
+                        // to='/my-bookings'
                         onClick={() => {
                             handleAppointmentBooking(id)
                         }}
                         className='btn w-full bg-blue-400 text-white hover:bg-primary  text-xl py-6 my-6 rounded-full font-semibold '>
                         Book Appointment Now
-                    </NavLink>
+                    </button>
 
                     <ToastContainer
                         toastStyle={{ fontSize: '16px', fontWeight: '600' }}
