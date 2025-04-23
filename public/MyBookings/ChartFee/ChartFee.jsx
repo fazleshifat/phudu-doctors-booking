@@ -4,17 +4,8 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer, 
 
 const ChartFee = ({appointmentList} ) => {
 
-    // console.log(bookingList.bookingList)
     const eachAppointment = appointmentList;
-    // console.log(eachAppointment)
-
-    // const [doctor] = bookingList;
-    // console.log(typeof doctor)
-
-
-    // const bookingList = [
-
-    // ]
+  
 
     const getPath = (x, y, width, height) => {
         return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}

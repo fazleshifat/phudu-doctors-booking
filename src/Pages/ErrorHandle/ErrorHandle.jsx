@@ -15,7 +15,7 @@ const ErrorHandle = () => {
                     <h1 className='text-3xl text-gray-700'>page not found!!</h1>
                     <p className='text-lg text-gray-700'>Go to another page</p>
 
-                    <button className='btn bg-blue-400 text-white mt-6 rounded-3xl p-6 text-lg'><Link to='/'>Back To Homepage</Link></button>
+                    <button className='btn bg-sky-500 hover:bg-primary text-white mt-6 rounded-3xl p-6 text-lg'><Link to='/'>Back To Homepage</Link></button>
                 </div>
             </div>
         </>

@@ -10,6 +10,6 @@ import { ToastContainer } from 'react-toastify'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Routes></Routes>
-    <ToastContainer></ToastContainer>
+    <ToastContainer className='text-xl'></ToastContainer>
   </StrictMode>
 )

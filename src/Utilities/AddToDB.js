@@ -18,7 +18,7 @@ const addToStoreAppointment = (id, name) => {
     const storedAppointmentData = getStoredAppointment();
 
     if (storedAppointmentData.includes(id)) {
-        toast.error('Already booked this doctor!', {
+        toast.error(`Already booked an appointment with ${name}!`, {
             position: "bottom-right",
             theme: "colored",
 
@@ -46,7 +46,7 @@ const removeAppointment = (id, name) => {
     const remainingAppointment = appointment.filter(appointment => parseInt(appointment) !== id)
 
     localStorage.setItem('appointmentList', JSON.stringify(remainingAppointment))
-    toast.success(`Successfully Canceled an appointment with ${name}`, {
+    toast.error(`appointment Canceled with ${name}`, {
         position: "bottom-right",
         theme: "colored",
     });

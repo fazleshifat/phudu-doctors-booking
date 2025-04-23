@@ -15,7 +15,7 @@ const Details = () => {
     const data = useLoaderData()
     const singleDoctor = data.find(doctor => doctor.id === bookedId);
     // console.log(singleDoctor)
-    const { image, name, education, speciality, registrationNumber, availability, workplace, fee } = singleDoctor;
+    const { image, name, education, speciality, registrationNumber, availability, workplace, fee,slogan } = singleDoctor;
     // console.log(typeof id)
 
 
@@ -37,9 +37,7 @@ const Details = () => {
             <div className='flex flex-col justify-center py-16 w-11/12 mx-auto bg-white rounded-3xl text-center h-72'>
                 <div className='p-3'>
                     <h1 className='text-2xl md:text-5xl font-bold'>Doctor’s Profile Details</h1>
-                    <p className='text-sm md:text-lg mt-4 opacity-70'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum voluptates consectetur rerum similique,
-                        <br />
-                        quae voluptatem quos nisi accusantium, animi repellat repudiandae, pariatur alias veritatis voluptatibus tenetur ducimus fugiat tempore odio.</p>
+                    <p className='text-sm md:text-lg mt-4 opacity-70'>{slogan}</p>
                 </div>
             </div>
 
@@ -118,7 +116,10 @@ const Details = () => {
                     <button
                         // to='/my-bookings'
                         onClick={() => {
-                            handleAppointmentBooking(id)
+                            (
+                                handleAppointmentBooking(id),
+                                window.scrollTo(0,0)
+                            )
                         }}
                         className='btn w-full bg-blue-400 text-white hover:bg-primary  text-xl py-6 my-6 rounded-full font-semibold '>
                         Book Appointment Now

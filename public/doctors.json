@@ -1,237 +1,207 @@
 [
     {
-        "id": 1,
-        "image": "https://i.ibb.co.com/x8CJQtCL/male1.jpg",
-        "name": "Dr. Tanvir Hossain",
-        "education": "MBBS, FCPS (Medicine)",
-        "speciality": "Internal Medicine",
-        "experience": "12+",
-        "registrationNumber": "BMC-123456",
-        "designation": "Consultant, Internal Medicine",
-        "workplace": "Square Hospital, Dhaka",
-        "fee": 1000,
-        "availability": {
-            "days": [
-                "Sunday",
-                "Tuesday",
-                "Thursday"
-            ],
-            "status": "available"
-        }
+      "id": 1,
+      "image": "https://i.ibb.co.com/x8CJQtCL/male1.jpg",
+      "name": "Dr. Tanvir Hossain",
+      "education": "MBBS, FCPS (Medicine)",
+      "speciality": "Internal Medicine",
+      "experience": "12+",
+      "registrationNumber": "BMC-123456",
+      "designation": "Consultant, Internal Medicine",
+      "workplace": "Square Hospital, Dhaka",
+      "fee": 1000,
+      "availability": {
+        "days": ["Sunday", "Tuesday", "Thursday"],
+        "status": "available"
+      },
+      "slogan": "Caring for your health, one step at a time. --Dr. Tanvir Hossain"
     },
     {
-        "id": 2,
-        "image": "https://i.ibb.co.com/r2m1pkx4/female2.png",
-        "name": "Dr. Nafisa Rahman",
-        "education": "MBBS, MS (Gynaecology)",
-        "speciality": "Gynaecology & Obstetrics",
-        "experience": "10+",
-        "registrationNumber": "BMC-234567",
-        "designation": "Associate Professor, Gynae",
-        "workplace": "Ibn Sina Hospital, Dhaka",
-        "fee": 900,
-        "availability": {
-            "days": [
-                "Monday",
-                "Wednesday",
-                "Saturday"
-            ],
-            "status": "available"
-        }
+      "id": 2,
+      "image": "https://i.ibb.co.com/r2m1pkx4/female2.png",
+      "name": "Dr. Nafisa Rahman",
+      "education": "MBBS, MS (Gynaecology)",
+      "speciality": "Gynaecology & Obstetrics",
+      "experience": "10+",
+      "registrationNumber": "BMC-234567",
+      "designation": "Associate Professor, Gynae",
+      "workplace": "Ibn Sina Hospital, Dhaka",
+      "fee": 900,
+      "availability": {
+        "days": ["Monday", "Wednesday", "Saturday"],
+        "status": "available"
+      },
+      "slogan": "Empowering women's health with compassion and care. --Dr. Nafisa Rahman"
     },
     {
-        "id": 3,
-        "image": "https://i.ibb.co.com/jk9bx23j/male3.jpg",
-        "name": "Dr. Azad Kabir",
-        "education": "MBBS, MD (Cardiology)",
-        "speciality": "Cardiology",
-        "experience": "15+",
-        "registrationNumber": "BMC-345678",
-        "designation": "Chief Cardiologist",
-        "workplace": "National Heart Foundation",
-        "fee": 1200,
-        "availability": {
-            "days": [
-                "Sunday",
-                "Tuesday"
-            ],
-            "status": "unavailable"
-        }
+      "id": 3,
+      "image": "https://i.ibb.co.com/jk9bx23j/male3.jpg",
+      "name": "Dr. Azad Kabir",
+      "education": "MBBS, MD (Cardiology)",
+      "speciality": "Cardiology",
+      "experience": "15+",
+      "registrationNumber": "BMC-345678",
+      "designation": "Chief Cardiologist",
+      "workplace": "National Heart Foundation",
+      "fee": 1200,
+      "availability": {
+        "days": ["Sunday", "Tuesday"],
+        "status": "unavailable"
+      },
+      "slogan": "Guarding every heartbeat with dedication. --Dr. Azad Kabir"
     },
     {
-        "id": 4,
-        "image": "https://i.ibb.co.com/tPZk6GBP/female4.png",
-        "name": "Dr. Farzana Ahmed",
-        "education": "MBBS, FCPS (Dermatology)",
-        "speciality": "Dermatology",
-        "experience": "8+",
-        "registrationNumber": "BMC-456789",
-        "designation": "Consultant Dermatologist",
-        "workplace": "Labaid Specialized Hospital",
-        "fee": 800,
-        "availability": {
-            "days": [
-                "Monday",
-                "Wednesday",
-                "Friday"
-            ],
-            "status": "available"
-        }
+      "id": 4,
+      "image": "https://i.ibb.co.com/tPZk6GBP/female4.png",
+      "name": "Dr. Farzana Ahmed",
+      "education": "MBBS, FCPS (Dermatology)",
+      "speciality": "Dermatology",
+      "experience": "8+",
+      "registrationNumber": "BMC-456789",
+      "designation": "Consultant Dermatologist",
+      "workplace": "Labaid Specialized Hospital",
+      "fee": 800,
+      "availability": {
+        "days": ["Monday", "Wednesday", "Friday"],
+        "status": "available"
+      },
+      "slogan": "Bringing out your natural glow with confidence. --Dr. Farzana Ahmed"
     },
     {
-        "id": 5,
-        "image": "https://i.ibb.co.com/zH0s66kd/male5.jpg",
-        "name": "Dr. Ruhul Amin",
-        "education": "MBBS, FCPS (Orthopaedics)",
-        "speciality": "Orthopaedic Surgery",
-        "experience": "18+",
-        "registrationNumber": "BMC-567890",
-        "designation": "Orthopaedic Surgeon",
-        "workplace": "BSMMU",
-        "fee": 1300,
-        "availability": {
-            "days": [
-                "Sunday",
-                "Wednesday"
-            ],
-            "status": "unavailable"
-        }
+      "id": 5,
+      "image": "https://i.ibb.co.com/zH0s66kd/male5.jpg",
+      "name": "Dr. Ruhul Amin",
+      "education": "MBBS, FCPS (Orthopaedics)",
+      "speciality": "Orthopaedic Surgery",
+      "experience": "18+",
+      "registrationNumber": "BMC-567890",
+      "designation": "Orthopaedic Surgeon",
+      "workplace": "BSMMU",
+      "fee": 1300,
+      "availability": {
+        "days": ["Sunday", "Wednesday"],
+        "status": "unavailable"
+      },
+      "slogan": "Stronger bones, better living. --Dr. Ruhul Amin"
     },
     {
-        "id": 6,
-        "image": "https://i.ibb.co.com/h1dddhh9/female6.jpg",
-        "name": "Dr. Nusrat Jahan",
-        "education": "MBBS, DCH",
-        "speciality": "Child Specialist",
-        "experience": "9+",
-        "registrationNumber": "BMC-678901",
-        "designation": "Pediatric Consultant",
-        "workplace": "United Hospital, Dhaka",
-        "fee": 850,
-        "availability": {
-            "days": [
-                "Monday",
-                "Thursday",
-                "Saturday"
-            ],
-            "status": "available"
-        }
+      "id": 6,
+      "image": "https://i.ibb.co.com/h1dddhh9/female6.jpg",
+      "name": "Dr. Nusrat Jahan",
+      "education": "MBBS, DCH",
+      "speciality": "Child Specialist",
+      "experience": "9+",
+      "registrationNumber": "BMC-678901",
+      "designation": "Pediatric Consultant",
+      "workplace": "United Hospital, Dhaka",
+      "fee": 850,
+      "availability": {
+        "days": ["Monday", "Thursday", "Saturday"],
+        "status": "available"
+      },
+      "slogan": "Because every child deserves a healthy tomorrow. --Dr. Nusrat Jahan"
     },
     {
-        "id": 7,
-        "image": "https://i.ibb.co.com/tMtt0fjC/male7.jpg",
-        "name": "Dr. Moin Uddin",
-        "education": "MBBS, MS (Neurosurgery)",
-        "speciality": "Neurosurgery",
-        "experience": "11+",
-        "registrationNumber": "BMC-789012",
-        "designation": "Neurosurgeon",
-        "workplace": "Apollo Hospitals, Dhaka",
-        "fee": 1400,
-        "availability": {
-            "days": [
-                "Tuesday",
-                "Thursday"
-            ],
-            "status": "available"
-        }
+      "id": 7,
+      "image": "https://i.ibb.co.com/tMtt0fjC/male7.jpg",
+      "name": "Dr. Moin Uddin",
+      "education": "MBBS, MS (Neurosurgery)",
+      "speciality": "Neurosurgery",
+      "experience": "11+",
+      "registrationNumber": "BMC-789012",
+      "designation": "Neurosurgeon",
+      "workplace": "Apollo Hospitals, Dhaka",
+      "fee": 1400,
+      "availability": {
+        "days": ["Tuesday", "Thursday"],
+        "status": "available"
+      },
+      "slogan": "Healing minds, repairing nerves. --Dr. Moin Uddin"
     },
     {
-        "id": 8,
-        "image": "https://i.ibb.co.com/Z1bymKB2/female8.jpg",
-        "name": "Dr. Shamsun Nahar",
-        "education": "MBBS, FCPS (ENT)",
-        "speciality": "ENT Specialist",
-        "experience": "13+",
-        "registrationNumber": "BMC-890123",
-        "designation": "ENT Consultant",
-        "workplace": "Dhaka Medical College Hospital",
-        "fee": 750,
-        "availability": {
-            "days": [
-                "Sunday",
-                "Tuesday",
-                "Friday"
-            ],
-            "status": "unavailable"
-        }
+      "id": 8,
+      "image": "https://i.ibb.co.com/Z1bymKB2/female8.jpg",
+      "name": "Dr. Shamsun Nahar",
+      "education": "MBBS, FCPS (ENT)",
+      "speciality": "ENT Specialist",
+      "experience": "13+",
+      "registrationNumber": "BMC-890123",
+      "designation": "ENT Consultant",
+      "workplace": "Dhaka Medical College Hospital",
+      "fee": 750,
+      "availability": {
+        "days": ["Sunday", "Tuesday", "Friday"],
+        "status": "unavailable"
+      },
+      "slogan": "Your voice, hearing, and breathing — our priority. --Dr. Shamsun Nahar"
     },
     {
-        "id": 9,
-        "image": "https://i.ibb.co.com/CKY6hZb2/male9.jpg",
-        "name": "Dr. Rezaul Karim",
-        "education": "MBBS, MD (Psychiatry)",
-        "speciality": "Psychiatry",
-        "experience": "7+",
-        "registrationNumber": "BMC-901234",
-        "designation": "Psychiatrist",
-        "workplace": "National Institute of Mental Health",
-        "fee": 1000,
-        "availability": {
-            "days": [
-                "Monday",
-                "Thursday"
-            ],
-            "status": "available"
-        }
+      "id": 9,
+      "image": "https://i.ibb.co.com/CKY6hZb2/male9.jpg",
+      "name": "Dr. Rezaul Karim",
+      "education": "MBBS, MD (Psychiatry)",
+      "speciality": "Psychiatry",
+      "experience": "7+",
+      "registrationNumber": "BMC-901234",
+      "designation": "Psychiatrist",
+      "workplace": "National Institute of Mental Health",
+      "fee": 1000,
+      "availability": {
+        "days": ["Monday", "Thursday"],
+        "status": "available"
+      },
+      "slogan": "Mental wellness is just a conversation away. --Dr. Rezaul Karim"
     },
     {
-        "id": 10,
-        "image": "https://i.ibb.co.com/7xfdt0pf/female10.jpg",
-        "name": "Dr. Sabrina Islam",
-        "education": "MBBS, FCPS (Ophthalmology)",
-        "speciality": "Eye Specialist",
-        "experience": "10+",
-        "registrationNumber": "BMC-012345",
-        "designation": "Eye Surgeon",
-        "workplace": "Ispahani Eye Institute",
-        "fee": 700,
-        "availability": {
-            "days": [
-                "Wednesday",
-                "Saturday"
-            ],
-            "status": "available"
-        }
+      "id": 10,
+      "image": "https://i.ibb.co.com/7xfdt0pf/female10.jpg",
+      "name": "Dr. Sabrina Islam",
+      "education": "MBBS, FCPS (Ophthalmology)",
+      "speciality": "Eye Specialist",
+      "experience": "10+",
+      "registrationNumber": "BMC-012345",
+      "designation": "Eye Surgeon",
+      "workplace": "Ispahani Eye Institute",
+      "fee": 700,
+      "availability": {
+        "days": ["Wednesday", "Saturday"],
+        "status": "available"
+      },
+      "slogan": "Vision with precision, care with clarity. --Dr. Sabrina Islam"
     },
     {
-        "id": 11,
-        "image": "https://i.ibb.co.com/DHkjfXGK/male11.jpg",
-        "name": "Dr. Mahmud Hasan",
-        "education": "MBBS, FCPS (Urology)",
-        "speciality": "Urologist",
-        "experience": "14+",
-        "registrationNumber": "BMC-112233",
-        "designation": "Senior Consultant, Urology",
-        "workplace": "Popular Diagnostic Center",
-        "fee": 1100,
-        "availability": {
-            "days": [
-                "Sunday",
-                "Tuesday",
-                "Thursday"
-            ],
-            "status": "unavailable"
-        }
+      "id": 11,
+      "image": "https://i.ibb.co.com/DHkjfXGK/male11.jpg",
+      "name": "Dr. Mahmud Hasan",
+      "education": "MBBS, FCPS (Urology)",
+      "speciality": "Urologist",
+      "experience": "14+",
+      "registrationNumber": "BMC-112233",
+      "designation": "Senior Consultant, Urology",
+      "workplace": "Popular Diagnostic Center",
+      "fee": 1100,
+      "availability": {
+        "days": ["Sunday", "Tuesday", "Thursday"],
+        "status": "unavailable"
+      },
+      "slogan": "Delivering trust and expertise in urological care. --Dr. Mahmud Hasan"
     },
     {
-        "id": 12,
-        "image": "https://i.ibb.co.com/214Xsvgj/fmele12.jpg",
-        "name": "Dr. Afsana Chowdhury",
-        "education": "MBBS, FCPS (Endocrinology)",
-        "speciality": "Diabetes & Hormone Specialist",
-        "experience": "9+",
-        "registrationNumber": "BMC-223344",
-        "designation": "Endocrinologist",
-        "workplace": "Birdem General Hospital",
-        "fee": 950,
-        "availability": {
-            "days": [
-                "Monday",
-                "Wednesday",
-                "Friday"
-            ],
-            "status": "available"
-        }
+      "id": 12,
+      "image": "https://i.ibb.co.com/214Xsvgj/fmele12.jpg",
+      "name": "Dr. Afsana Chowdhury",
+      "education": "MBBS, FCPS (Endocrinology)",
+      "speciality": "Diabetes & Hormone Specialist",
+      "experience": "9+",
+      "registrationNumber": "BMC-223344",
+      "designation": "Endocrinologist",
+      "workplace": "Birdem General Hospital",
+      "fee": 950,
+      "availability": {
+        "days": ["Monday", "Wednesday", "Friday"],
+        "status": "available"
+      },
+      "slogan": "Balancing hormones, enriching lives. --Dr. Afsana Chowdhury"
     }
-]
+  ]
+  

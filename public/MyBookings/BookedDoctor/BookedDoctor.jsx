@@ -44,7 +44,13 @@ const BookedDoctor = ({ bookedDoctor, handleRemove }) => {
                     <hr className='mx-auto w-full opacity-70 border-dashed' />
 
                     <div className="card-actions">
-                        <button onClick={() => removeBookingHandle(id, name)} className="btn border-orange-700 text-orange-500 font-semibold w-full rounded-full text-lg md:text-2xl p-6 hover:text-red-600">Cancel Appointment </button>
+                        <button onClick={() =>
+                        (
+                            removeBookingHandle(id, name)
+                            , window.scrollTo(0, 0)
+                        )
+                        }
+                            className="btn border-orange-700 text-orange-500 font-semibold w-full rounded-full text-lg md:text-2xl p-6 hover:text-red-600">Cancel Appointment </button>
                     </div>
 
                     {/* <div className="card-actions">
