@@ -1,4 +1,4 @@
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 
 
@@ -14,18 +14,16 @@ const getStoredAppointment = () => {
 }
 
 const addToStoreAppointment = (id, name) => {
-    console.log(name)
+    // console.log(name)
     const storedAppointmentData = getStoredAppointment();
 
     if (storedAppointmentData.includes(id)) {
         toast.error('Already booked this doctor!', {
             position: "bottom-right",
-            autoClose: 5000,
-
-            progress: undefined,
             theme: "colored",
 
         });
+        return false;
 
     }
     else {
@@ -33,20 +31,27 @@ const addToStoreAppointment = (id, name) => {
         storedAppointmentData.push(id);
         const data = JSON.stringify(storedAppointmentData)
         localStorage.setItem('appointmentList', data)
-        toast.success(`Successfully booked an appointment with ${name}`,);
-
-
+        toast.success(`Successfully booked an appointment with ${name}`, {
+            position: "bottom-right",
+            theme: "colored",
+        });
+        return true;
 
     }
 }
 
-const removeAppointment = (id) => {
+const removeAppointment = (id, name) => {
     const appointment = getStoredAppointment();
     // const convertedAppointment = parseInt(appointment)
     const remainingAppointment = appointment.filter(appointment => parseInt(appointment) !== id)
 
     localStorage.setItem('appointmentList', JSON.stringify(remainingAppointment))
-    toast.success(`Successfully removed an appointment with !!`,);
+    toast.success(`Successfully Canceled an appointment with ${name}`, {
+        position: "bottom-right",
+        theme: "colored",
+    });
+
+
 
 }
 

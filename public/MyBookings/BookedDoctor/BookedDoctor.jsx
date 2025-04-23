@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { FaUserDoctor } from "react-icons/fa6";
-import { removeAppointment } from '../../../src/Utilities/AddToDB';
+import { ToastContainer } from 'react-toastify';
 
-const BookedDoctor = ({ bookedDoctor }) => {
+
+const BookedDoctor = ({ bookedDoctor, handleRemove }) => {
 
     // console.log(bookedDoctor)
 
@@ -10,9 +11,9 @@ const BookedDoctor = ({ bookedDoctor }) => {
     // console.log(typeof id)
 
 
-    const removeBookingHandle = (id) =>{
+    const removeBookingHandle = (id, name) => {
         // removeAppointment(id);
-        removeAppointment(id);
+        handleRemove(id, name);
     }
 
 
@@ -43,9 +44,9 @@ const BookedDoctor = ({ bookedDoctor }) => {
                     <hr className='mx-auto w-full opacity-70 border-dashed' />
 
                     <div className="card-actions">
-                        <button onClick={()=> removeBookingHandle(id) } className="btn border-orange-700 text-orange-500 font-semibold w-full rounded-full text-lg md:text-2xl p-6 hover:text-red-600">Cancel Appointment </button>
+                        <button onClick={() => removeBookingHandle(id, name)} className="btn border-orange-700 text-orange-500 font-semibold w-full rounded-full text-lg md:text-2xl p-6 hover:text-red-600">Cancel Appointment </button>
                     </div>
-                    
+
                     {/* <div className="card-actions">
                         <button className="btn border-orange-700 text-orange-500 font-semibold w-full rounded-full text-lg md:text-2xl p-6 hover:text-red-600">Cancel Appointment </button>
                     </div> */}

@@ -1,22 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
-import { getStoredAppointment } from '../../Utilities/AddToDB';
+import { getStoredAppointment, removeAppointment } from '../../Utilities/AddToDB';
 import NoAppointment from '../../../public/MyBookings/NoAppointment/NoAppointment';
 import Appointment from '../../../public/MyBookings/Appointment/Appointment';
+import { toast } from 'react-toastify';
 
 const BookingSection = () => {
 
-    const [appointmentList, setAppointMentList] = useState([]);
+    const [appointmentList, setAppointmentList] = useState([]);
     const data = useLoaderData();
 
-    useEffect(() => {
-        const appointmentList = getStoredAppointment();
-        const convertedStoredAppointment = appointmentList.map(id => parseInt(id));
-        const myAppointmentList = data.filter(appointment => convertedStoredAppointment.includes(appointment.id));
-        setAppointMentList(myAppointmentList);
-    }, [])
 
-    // console.log(appointmentList)
+    useEffect(() => {
+        const stored = getStoredAppointment().map(id => parseInt(id));
+        const filtered = data.filter(doc => stored.includes(doc.id));
+        setAppointmentList(filtered);
+        console.log(filtered)
+    }, []);
+
+    const handleRemoveAppointment = (id, name) => {
+        removeAppointment(id,name);
+        const updatedList = appointmentList.filter(doc => doc.id !== id);
+        setAppointmentList(updatedList);
+
+    };
+
+
 
 
     return (
@@ -26,8 +35,13 @@ const BookingSection = () => {
             {
                 appointmentList.length === 0 ? (
                     <NoAppointment></NoAppointment>
+                    
                 ) : (
-                    <Appointment appointmentList={appointmentList}></Appointment>
+                    <Appointment
+                        appointmentList={appointmentList}
+                        onRemove={handleRemoveAppointment}
+                    ></Appointment>
+                    
                 )
             }
         </div>

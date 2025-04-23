@@ -1,6 +1,6 @@
 import React from 'react';
 import { TbInfoHexagon } from "react-icons/tb";
-import { NavLink, useLoaderData, useParams } from 'react-router';
+import { NavLink, useLoaderData, useNavigate, useParams } from 'react-router';
 import { ToastContainer } from 'react-toastify';
 import { addToStoreAppointment } from '../../Utilities/AddToDB';
 
@@ -8,6 +8,7 @@ import { addToStoreAppointment } from '../../Utilities/AddToDB';
 const Details = () => {
 
 
+    const navigate = useNavigate();
 
     const { id } = useParams();
     const bookedId = parseInt(id)
@@ -19,7 +20,13 @@ const Details = () => {
 
 
     const handleAppointmentBooking = (id) => {
-        addToStoreAppointment(id, name)
+
+        const isBooked =  addToStoreAppointment(id, name)
+        
+        if(isBooked){
+            navigate('/my-bookings')
+        }
+    
     }
 
 
@@ -116,13 +123,6 @@ const Details = () => {
                         className='btn w-full bg-blue-400 text-white hover:bg-primary  text-xl py-6 my-6 rounded-full font-semibold '>
                         Book Appointment Now
                     </button>
-
-                    <ToastContainer
-                        toastStyle={{ fontSize: '16px', fontWeight: '600' }}
-                        position="bottom-right"
-                        autoClose={5000}
-                        pauseOnHover
-                        theme="colored" />
                 </div>
             </div>
 

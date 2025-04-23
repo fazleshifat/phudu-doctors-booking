@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import BookedDoctor from '../BookedDoctor/BookedDoctor';
 import ChartFee from '../ChartFee/ChartFee';
 import { getStoredAppointment } from '../../../src/Utilities/AddToDB';
+import { ToastContainer } from 'react-toastify';
 
 
-const Appointment = ({ appointmentList }) => {
+const Appointment = ({ appointmentList, onRemove }) => {
     // console.log(appointmentList
 
 
@@ -19,7 +20,7 @@ const Appointment = ({ appointmentList }) => {
             <ChartFee appointmentList={appointmentList}></ChartFee>
 
 
-            <h1 className='text-2xl md:text-4xl font-bold text-center'>My Today Appointments</h1>
+            <h1 className='text-2xl md:text-4xl font-bold text-center '>My Today Appointments</h1>
             <p className='text-lg md:text-xl text-center opacity-70'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
 
             <div className='w-11/12 mx-auto mt-11'>
@@ -37,13 +38,12 @@ const Appointment = ({ appointmentList }) => {
                     <BookedDoctor
                         key={bookedDoctor.id}
                         bookedDoctor={bookedDoctor}
-                        
+                        handleRemove={onRemove}
                     >
 
 
                     </BookedDoctor>)
             }
-
         </div>
     );
 };
