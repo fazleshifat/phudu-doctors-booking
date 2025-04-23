@@ -10,6 +10,7 @@ import Blogs from '../../Pages/Blogs/Blogs';
 import ErrorHandle from '../../Pages/ErrorHandle/ErrorHandle';
 import Details from '../../Pages/Details/Details';
 import MyBookings from '../../Pages/MyBookings/MyBookings';
+import InvalidDoctor from '../../Pages/InvalidDoctor/InvalidDoctor';
 
 
 
@@ -29,12 +30,14 @@ const router = createBrowserRouter([
                 path: '/details/:id',
                 loader: () => fetch('/doctors.json'),
                 Component:Details,
+                errorElement: <InvalidDoctor />,
             }
             ,
             {
                 path: '/my-bookings',
                 loader: () => fetch('/doctors.json'),
                 Component:MyBookings,
+
             },
             {
                 path: '/blogs',
