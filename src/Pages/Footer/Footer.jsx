@@ -13,7 +13,7 @@ const Footer = () => {
 
             <div className='flex items-center gap-1'>
                 <img src="/assets/logo.png" className='w-6' alt="logo" />
-                <a className="cursor-pointer font-bold text-xl md:text-2xl">Phudu</a>
+                <a className="font-bold text-xl md:text-2xl">Phudu</a>
             </div>
 
             <div className="navbar-center flex">

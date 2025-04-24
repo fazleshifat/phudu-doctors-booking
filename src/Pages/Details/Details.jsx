@@ -16,6 +16,7 @@ const Details = () => {
     const data = useLoaderData()
     const singleDoctor = data.find(doctor => doctor.id === bookedId);
     // console.log(singleDoctor)
+    
 
     if (!singleDoctor) {
         return <InvalidDoctor id={id}></InvalidDoctor>
