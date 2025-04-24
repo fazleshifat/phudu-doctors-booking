@@ -16,7 +16,7 @@ const Banner = () => {
                     </p>
                     <div className='md:flex gap-2 mx-auto w-fit items-center '>
                         <input type="text" placeholder="Search any doctor..." className="input mb-4 md:mb-0 md:w-2xl h-14 rounded-4xl  focus:outline-none" />
-                        <button className="btn btn-primary h-12 w-32 rounded-4xl font-bold">Search Now</button>
+                        <button className="btn bg-sky-500 hover:bg-primary text-white h-12 w-32 rounded-4xl font-bold">Search Now</button>
                     </div>
                 </div>
 
