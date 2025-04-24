@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="navbar-center flex">
                 <ul className="flex flex-col md:flex-row menu menu-horizontal gap-2 md:gap-8 text-sm md:text-xl">
                     <li className='border-b-2 border-b-base-300 font-semibold hover:border-b-2 hover:border-sky-500'><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500' : '')} to='/'>Home</NavLink></li>
-                    <li className='border-b-2 border-b-base-300 font-semibold hover:border-b-2 hover:border-sky-500'><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 ' : '')} to='/my-bookings'>My-Bookings</NavLink></li>
+                    <li className='border-b-2 border-b-base-300 font-semibold hover:border-b-2 hover:border-sky-500'><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 ' : '')} to='/my-bookings'>My Bookings</NavLink></li>
                     <li className='border-b-2 border-b-base-300 font-semibold hover:border-b-2 hover:border-sky-500'><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 ' : '')} to='/blogs'>Blogs</NavLink></li>
                     <li className='border-b-2 border-b-base-300 font-semibold hover:border-b-2 hover:border-sky-500'><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 ' : '')} to='/contact'>Contact Us</NavLink></li>
 
