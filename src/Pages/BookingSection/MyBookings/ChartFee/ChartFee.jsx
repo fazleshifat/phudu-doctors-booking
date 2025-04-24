@@ -4,7 +4,20 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer, 
 
 const ChartFee = ({ appointmentList }) => {
 
-    const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
+    const colors = [
+        "red",
+        "#F39C12", 
+        "yellow", 
+        "green", 
+        "#4B4453", 
+        "#2ECC71", 
+        "#3D2C8D", 
+        "#F1C40F", 
+        "#212121",
+        "#3498DB", 
+        "#5C5470", 
+        "#ECF0F1"  
+    ];
 
     const data = appointmentList;
 
@@ -24,7 +37,7 @@ const ChartFee = ({ appointmentList }) => {
 
 
     return (
-        <div className='w-11/12 md:h-130 mx-auto bg-white rounded-3xl' >
+        <div className='w-11/12 h-50 md:h-130 mx-auto bg-white rounded-3xl' >
 
             <ResponsiveContainer width="100%" height="100%">
 
