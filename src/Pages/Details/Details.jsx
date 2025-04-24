@@ -1,7 +1,6 @@
 import React from 'react';
 import { TbInfoHexagon } from "react-icons/tb";
-import { NavLink, useLoaderData, useNavigate, useParams } from 'react-router';
-import { ToastContainer } from 'react-toastify';
+import { useLoaderData, useNavigate, useParams } from 'react-router';
 import { addToStoreAppointment } from '../../Utilities/AddToDB';
 
 
@@ -15,18 +14,18 @@ const Details = () => {
     const data = useLoaderData()
     const singleDoctor = data.find(doctor => doctor.id === bookedId);
     // console.log(singleDoctor)
-    const { image, name, education, speciality,designation, registrationNumber, availability, workplace, fee,slogan } = singleDoctor;
+    const { image, name, education, speciality, designation, registrationNumber, availability, workplace, fee, slogan } = singleDoctor;
     // console.log(typeof id)
 
 
     const handleAppointmentBooking = (id) => {
 
-        const isBooked =  addToStoreAppointment(id, name)
-        
-        if(isBooked){
+        const isBooked = addToStoreAppointment(id, name)
+
+        if (isBooked) {
             navigate('/my-bookings')
         }
-    
+
     }
 
 
@@ -119,7 +118,7 @@ const Details = () => {
                         onClick={() => {
                             (
                                 handleAppointmentBooking(id),
-                                window.scrollTo(0,0)
+                                window.scrollTo(0, 0)
                             )
                         }}
                         className='btn w-full bg-blue-400 text-white hover:bg-primary  text-xl py-6 my-6 rounded-full font-semibold '>
@@ -127,6 +126,7 @@ const Details = () => {
                     </button>
                 </div>
             </div>
+
 
         </div>
     );

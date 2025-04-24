@@ -16,33 +16,31 @@ import Loader from '../Loader/Loader';
 
 
 
+
 const router = createBrowserRouter([
     {
         path: "/",
-        element:<Suspense fallback={Loader}>
-            <MainLayout>
-
-            </MainLayout>
-        </Suspense>,
+        Component: MainLayout,
         children: [
             {
                 index: true,
                 path: '/',
                 loader: () => fetch('/doctors.json'),
                 Component: Home,
+                HydrateFallback: Loader,
             },
-            {   
+            {
                 path: '/details/:id',
                 loader: () => fetch('/doctors.json'),
-                Component:Details,
+                Component: Details,
                 errorElement: <InvalidDoctor />,
             }
             ,
             {
                 path: '/my-bookings',
                 loader: () => fetch('/doctors.json'),
-                Component:BookingSection,
-                
+                Component: BookingSection,
+
             },
             {
                 path: '/blogs',

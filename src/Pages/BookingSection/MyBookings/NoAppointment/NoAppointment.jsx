@@ -16,8 +16,8 @@ const NoAppointment = () => {
 
                 <Link to='/'><button className='btn bg-sky-500 hover:bg-primary text-white mt-6 rounded-3xl p-6 text-lg'>Back To Homepage</button></Link>
             </div>
-
         </div>
+
     );
 };
 

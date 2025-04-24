@@ -32,10 +32,10 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal space-x-10 text-xl">
-                    <li><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 font-bold' : '')} to='/'>Home</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 font-bold' : '')} to='/my-bookings'>My-Bookings</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 font-bold' : '')} to='/blogs'>Blogs</NavLink></li>
-                    <li><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 font-bold' : '')} to='/contact'>Contact Us</NavLink></li>
+                    <li className='border-b-2 border-b-base-300 font-semibold'><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2  text-sky-500 ' : '')} to='/'>Home</NavLink></li>
+                    <li className='border-b-2 border-b-base-300 font-semibold'><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 ' : '')} to='/my-bookings'>My-Bookings</NavLink></li>
+                    <li className='border-b-2 border-b-base-300 font-semibold'><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 ' : '')} to='/blogs'>Blogs</NavLink></li>
+                    <li className='border-b-2 border-b-base-300 font-semibold'><NavLink className={({ isActive }) => (isActive ? 'border-b-sky-500 border-b-2 text-sky-500 ' : '')} to='/contact'>Contact Us</NavLink></li>
 
 
                 </ul>
@@ -43,6 +43,7 @@ const Navbar = () => {
             <div className="navbar-end">
                 <a className="btn bg-sky-500 hover:bg-primary text-white rounded-full md:text-xl p-6">Emergency</a>
             </div>
+            
         </div>
     );
 };

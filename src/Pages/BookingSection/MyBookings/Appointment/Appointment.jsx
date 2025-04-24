@@ -5,8 +5,6 @@ import ChartFee from '../ChartFee/ChartFee';
 
 
 const Appointment = ({ appointmentList, onRemove }) => {
-    // console.log(appointmentList
-
 
 
 
@@ -43,6 +41,7 @@ const Appointment = ({ appointmentList, onRemove }) => {
 
                     </BookedDoctor>)
             }
+
         </div>
     );
 };

@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router';
 import { getStoredAppointment, removeAppointment } from '../../Utilities/AddToDB';
 import NoAppointment from './MyBookings/NoAppointment/NoAppointment';
 import Appointment from './MyBookings/Appointment/Appointment';
+import { ToastContainer } from 'react-toastify';
 
 const BookingSection = () => {
 
@@ -18,7 +19,7 @@ const BookingSection = () => {
     }, []);
 
     const handleRemoveAppointment = (id, name) => {
-        removeAppointment(id,name);
+        removeAppointment(id, name);
         const updatedList = appointmentList.filter(doc => doc.id !== id);
         setAppointmentList(updatedList);
 
@@ -34,16 +35,19 @@ const BookingSection = () => {
             {
                 appointmentList.length === 0 ? (
                     <NoAppointment></NoAppointment>
-                    
+
                 ) : (
                     <Appointment
                         appointmentList={appointmentList}
                         onRemove={handleRemoveAppointment}
                     ></Appointment>
-                    
+
                 )
             }
+
+            
         </div>
+
     );
 };
 

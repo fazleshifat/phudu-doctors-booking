@@ -3,7 +3,6 @@ import { MdEditCalendar } from "react-icons/md";
 
 
 const Blog = ({ blog }) => {
-    console.log(blog)
     return (
         <div className="hover:-translate-y-2 transition-transform duration-300 hover:shadow-2xl card mx-auto w-11/12 my-8 bg-base-100 card-xl shadow-xl rounded-3xl">
             <div className="card-body p-5 md:p-16 space-y-4">
