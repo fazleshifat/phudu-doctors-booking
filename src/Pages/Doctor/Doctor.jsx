@@ -8,13 +8,13 @@ const Doctor = ({ doctor }) => {
 
 
     return (
-        <div className="card bg-base-100 w-72 md:w-96 shadow-sm mx-auto rounded-3xl">
+        <div className="card bg-base-100 w-full shadow-sm mx-auto rounded-3xl">
             <figure className="px-5 md:px-6 pt-6">
                 <img
                     src={image}
 
                     alt="Shoes"
-                    className="rounded-xl md:w-11/12 h-56 md:h-80" />
+                    className="rounded-xl md:w-11/12 h-56 md:h-90" />
             </figure>
             <div className="card-body">
                 <div className='md:flex md:gap-2'>
@@ -44,7 +44,7 @@ const Doctor = ({ doctor }) => {
                     
                     <Link onClick={()=>{
                         window.scrollTo(0,0);
-                    }} className='btn w-full hover:bg-sky-400 hover:text-white p-6 border-sky-500 border-2 font-bold text-sky-600 rounded-4xl text-lg mt-3' to={`/details/${id}`}>
+                    }} className='btn w-full hover:bg-sky-400 hover:text-white md:p-6 border-sky-500 border-2 font-bold text-sky-600 rounded-4xl text-md md:text-lg mt-3' to={`/details/${id}`}>
                         View Details
                     </Link>
                 </div>

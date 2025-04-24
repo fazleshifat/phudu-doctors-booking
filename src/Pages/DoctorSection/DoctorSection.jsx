@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import Doctor from '../../../Doctor';
+import Doctor from '../Doctor/Doctor';
 
 const DoctorSection = ({ doctorsData }) => {
 
     // console.log(doctorsData)
 
-    const [displayPhones, setDisplayPhones] = useState([]);
+    const [displayDoctors, setDisplayDoctors] = useState([]);
 
     const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
         if (showAll) {
-            setDisplayPhones(doctorsData);
+            setDisplayDoctors(doctorsData);
         }
         else {
-            setDisplayPhones(doctorsData.slice(0, 6));
+            setDisplayDoctors(doctorsData.slice(0, 6));
         }
     }, [doctorsData, showAll]);
 
@@ -30,7 +30,7 @@ const DoctorSection = ({ doctorsData }) => {
 
             <div className='w-10/12 mx-auto grid grid-cols-1 md:grid-cols-3 py-18 gap-10'>
                 {
-                    displayPhones.map(doctor => <Doctor key={doctor.id} doctor={doctor}></Doctor>)
+                    displayDoctors.map(doctor => <Doctor key={doctor.id} doctor={doctor}></Doctor>)
                 }
             </div>
 
