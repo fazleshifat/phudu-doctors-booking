@@ -1,7 +1,9 @@
 import React from 'react';
 import { TbInfoHexagon } from "react-icons/tb";
-import { useLoaderData, useNavigate, useParams } from 'react-router';
+import { NavLink, useLoaderData, useNavigate, useParams } from 'react-router';
+import { ToastContainer } from 'react-toastify';
 import { addToStoreAppointment } from '../../Utilities/AddToDB';
+import InvalidDoctor from '../InvalidDoctor/InvalidDoctor';
 
 
 const Details = () => {
@@ -14,6 +16,14 @@ const Details = () => {
     const data = useLoaderData()
     const singleDoctor = data.find(doctor => doctor.id === bookedId);
     // console.log(singleDoctor)
+
+    if (!singleDoctor) {
+        return <InvalidDoctor id={id}></InvalidDoctor>
+    }
+
+
+
+
     const { image, name, education, speciality, designation, registrationNumber, availability, workplace, fee, slogan } = singleDoctor;
     // console.log(typeof id)
 

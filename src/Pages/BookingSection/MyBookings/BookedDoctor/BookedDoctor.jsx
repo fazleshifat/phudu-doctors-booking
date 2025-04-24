@@ -48,7 +48,7 @@ const BookedDoctor = ({ bookedDoctor, handleRemove }) => {
                             , window.scrollTo(0, 0)
                         )
                         }
-                            className="btn border-orange-700 text-orange-500 font-semibold w-full rounded-full text-lg md:text-2xl p-6 hover:text-red-600">Cancel Appointment </button>
+                            className="btn border-orange-700 text-orange-500 font-semibold w-full rounded-full text-md md:text-2xl md:p-6 hover:text-red-600">Cancel Appointment </button>
                     </div>
 
                     {/* <div className="card-actions">

@@ -33,25 +33,28 @@ const router = createBrowserRouter([
                 path: '/details/:id',
                 loader: () => fetch('/doctors.json'),
                 Component: Details,
-                errorElement: <InvalidDoctor />,
+                HydrateFallback: Loader,
             }
             ,
             {
                 path: '/my-bookings',
                 loader: () => fetch('/doctors.json'),
                 Component: BookingSection,
+                HydrateFallback: Loader,
 
             },
             {
                 path: '/blogs',
                 loader: () => fetch('/questions.json'),
                 Component: Blogs,
+                HydrateFallback: Loader,
             }
         ],
     },
     {
         path: '*',
         Component: ErrorHandle,
+        HydrateFallback: Loader,
     },
 ]);
 

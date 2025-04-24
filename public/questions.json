@@ -2,25 +2,25 @@
     {
         "id": 1,
         "question": "What is useState and how does it work in React?",
-        "answer": "useState is a hook that allows you to add state to your functional components in React. It returns an array with two elements: the current state value and a function to update it.",
+        "answer": "useState is basically a hook that allows us to add state to our functional components in React. It returns an array with two elements: the current state value and a function to update it.",
         "date": "2024-02-01"
     },
     {
         "id": 2,
         "question": "What is the purpose of useEffect in React?",
-        "answer": "useEffect is a hook that allows you to perform side effects in your functional components, such as fetching data, updating the DOM, or subscribing to events.",
+        "answer": "useEffect is basically a hook that allows us to perform side effects in your functional components, such as fetching data, updating the DOM, or subscribing to events.",
         "date": "2024-02-01"
     },
     {
         "id": 3,
         "question": "What is a custom hook in React and when should you use one?",
-        "answer": "A custom hook is a JavaScript function whose name starts with 'use' and that can call other hooks inside it. You should use custom hooks when you need to reuse logic between components.",
+        "answer": "A custom hook is a JavaScript function whose name starts with 'use' and that can call other hooks inside it. We should use custom hooks when we need to reuse logic between components.",
         "date": "2024-02-01"
     },
     {
         "id": 4,
         "question": "Difference between controlled and uncontrolled components? Which one is better?",
-        "answer": "Controlled components are components that control their own state via React's state, whereas uncontrolled components rely on the DOM to handle state. Controlled components are generally preferred in React for better state management.",
+        "answer": "Controlled components are components that control their own state via React's state, on the other hand uncontrolled components rely on the DOM to handle state. Controlled components are generally preferred in React for better state management.",
         "date": "2024-02-01"
     },
     {
