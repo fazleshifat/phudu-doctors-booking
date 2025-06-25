@@ -1,12 +1,55 @@
-# React + Vite
+# 🩺 Phudu Doctor - Healthcare Appointment Management Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Phudu Doctor** is a healthcare appointment management platform designed to help patients book, manage, and track doctor appointments efficiently through a user-friendly interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Site
 
-## Expanding the ESLint configuration
+**Live:** [https://phudu-doctors.netlify.app/](https://phudu-doctors.netlify.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+### Frontend:
+- ⚛️ React.js  
+- 🔐 Firebase (Authentication & Database)  
+- 🌐 React Router DOM  
+- 🎨 Tailwind CSS  
+
+### Backend:
+- ⚙️ Node.js  
+- 🚀 Express.js  
+- 🗃 MongoDB  
+- 📦 Mongoose  
+
+---
+
+## 🌟 Main Features
+
+- User registration and secure login with Firebase Auth  
+- Appointment booking and management system  
+- Doctor profile management  
+- Responsive and accessible UI with Tailwind CSS  
+- Smooth client-side routing with React Router  
+- RESTful API backend for managing appointments and users  
+
+---
+
+## 📦 Project Dependencies
+
+```plaintext
+# Frontend dependencies
+react            ^18.x
+firebase         ^10.x
+react-router-dom ^6.x
+tailwindcss      ^3.x
+axios            ^1.x
+
+# Backend dependencies
+express          ^4.x
+mongoose         ^7.x
+cors             ^2.x
+dotenv           ^16.x
+nodemon          ^3.x  (dev dependency)
