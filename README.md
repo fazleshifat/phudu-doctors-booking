@@ -14,15 +14,10 @@
 
 ### Frontend:
 - ⚛️ React.js  
-- 🔐 Firebase (Authentication & Database)  
 - 🌐 React Router DOM  
 - 🎨 Tailwind CSS  
 
-### Backend:
-- ⚙️ Node.js  
-- 🚀 Express.js  
-- 🗃 MongoDB  
-- 📦 Mongoose  
+### !no backend
 
 ---
 
